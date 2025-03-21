@@ -1,6 +1,7 @@
 import express from "express";
 import { devRouter } from "./routes/dev.routes.js";
 import { githubRouter } from "./routes/github.routes.js";
+import { subscribersRouter } from "./routes/subscribers.routes.js";
 
 const app = express();
 
@@ -12,6 +13,20 @@ app.use("/devdisplay/v1/trending/dev", devRouter);
 
 // Use the githubRouter for the "/api/v1/trending/github" route
 app.use("/devdisplay/v1/trending/github", githubRouter);
+
+app.use("/devdisplay/v1/subscribers", subscribersRouter);
+
+app.get("/", (req, res) => {
+    res.status(200).json({
+        message: "Welcome to the DevDisplay API!"
+    });
+})
+
+app.get("/health", (req, res) => {
+    res.status(200).json({
+        message: "DevDisplay API is healthy!"
+    });
+})
 
 // Global error handling middleware (optional)
 app.use((err, req, res, next) => {
