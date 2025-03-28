@@ -9,7 +9,8 @@ Publish
 *.suo
 *.cscfg
 *.Cache
-project.lock.json
+project-lock.json
+
 
 /packages
 /TestResults
@@ -48,3 +49,4 @@ __queuestorage__
 __azurite_db*__.json
 .vscode
 cron
+test
