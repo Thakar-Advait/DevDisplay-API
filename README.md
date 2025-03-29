@@ -8,6 +8,7 @@ DevDisplay API is a powerful backend service that aggregates and serves trending
 ## ✨ Key Features
 
 -   **Trending Insights**: Discover top developers, repositories, and posts
+-   **Regularly scraped data**: Latest data scraped from authentic sources
 -   **Flexible Time Frames**: Choose from daily, weekly, or monthly trending data
 -   **Multi-Source Aggregation**: Pulls data from GitHub and Dev.to
 -   **Newsletter Subscription**: Stay updated with the latest tech trends
@@ -30,6 +31,11 @@ DevDisplay-API/
 │
 ├── db/
 │   └── index.js
+|
+├── cron/
+│   └── dev.cron.js
+│   └── github.cron.js
+│   └── test.cron.js
 │
 ├── models/
 │   ├── developers.models.js

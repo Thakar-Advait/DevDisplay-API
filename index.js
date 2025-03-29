@@ -2,6 +2,8 @@ import app from "./app.js";
 import connectDb from "./db/index.js";
 import dotenv from "dotenv";
 import pingDB from "./cron/test.cron.js";
+import * as devCronJobs from "./cron/dev.cron.js";
+import * as githubCronJobs from "./cron/github.cron.js";
 
 dotenv.config({
     path: "./.env"
